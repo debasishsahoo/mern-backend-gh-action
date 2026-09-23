@@ -70,7 +70,7 @@ const User = mongoose.model('User', userSchema);
 app.get('/api/health', (req, res) => {
   res.json({ 
     status: 'OK', 
-    message: 'Backend API is running',
+    message: 'Backend API is running from Aws',
     timestamp: new Date().toISOString(),
     environment: process.env.NODE_ENV || 'development',
     database: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected',
